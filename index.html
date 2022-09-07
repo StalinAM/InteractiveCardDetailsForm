@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- Style -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <!-- Title -->
+    <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+    <main>
+        <picture>
+            <img class="card-back" src="./images/bg-card-back.png" alt="">
+            <img class="card-front" src="./images/bg-card-front.png" alt="">
+            <img class="card-background" src="./images/bg-main-mobile.png" alt="">
+        </picture>
+        <form class="form-container" action="/">
+            <label class="card-name">CARDHOLDER NAME<input type="text" placeholder="e.g. Jane Appleseed"></label>
+            <label class="card-number">CARD NUMBER<input type="tel" placeholder="e.g. 1234 5678 9123 0000"></label>
+            <label class="date-card">EXP. DATE (MM/YY)<input type="text" placeholder="MM"><input type="text"
+                    placeholder="YY"></label>
+            <label class="cvc-card">CVC<input type="text" placeholder="e.g. 123"></label>
+            <input value="Confirm" id="submint-data" type="submit">
+        </form>
+    </main>
+    <footer>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="https://github.com/StalinAM/InteractiveCardDetailsForm.git" target="_blank">StalinAM</a>.
+    </footer>
+</body>
+
+</html>
