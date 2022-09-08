@@ -18,25 +18,50 @@
 
 <body>
     <main>
-        <picture>
+        <div class="card-container">
             <img class="card-back" src="./images/bg-card-back.png" alt="">
             <img class="card-front" src="./images/bg-card-front.png" alt="">
+            <img class='card-logo' src="./images/card-logo.svg" alt="">
+
             <img class="card-background" src="./images/bg-main-mobile.png" alt="">
-        </picture>
+        </div>
+        <p id="name-card">JAME APPLESEED</p>
+        <p id="number-card">0000 0000 0000 0000</p>
+        <p id="date-card">00/00</p>
+        <p id="cvc-card">000</p>
         <form class="form-container" action="/">
-            <label class="card-name">CARDHOLDER NAME<input type="text" placeholder="e.g. Jane Appleseed"></label>
-            <label class="card-number">CARD NUMBER<input type="tel" placeholder="e.g. 1234 5678 9123 0000"></label>
-            <label class="date-card">EXP. DATE (MM/YY)<input type="text" placeholder="MM"><input type="text"
-                    placeholder="YY"></label>
-            <label class="cvc-card">CVC<input type="text" placeholder="e.g. 123"></label>
+            <label for="name-input" class="card-name">CARDHOLDER NAME<input id="name-input" name="name-input"
+                    type="text" placeholder="e.g. Jane Appleseed" required></label>
+            <label for="number-input" class="card-number">CARD NUMBER<input id="number-input" name="number-input"
+                    type="tel" placeholder="e.g. 1234 5678 9123 0000"></label>
+            <div class="data-cvc-container">
+                <div class="data-container">
+                    <label for="input-mm" class="date-card">EXP. DATE (MM/YY)</label>
+                    <label for="input-yy" class="inactive"></label>
+                    <div>
+                        <input id="input-mm" type="number" name="input-mm" placeholder="MM">
+                        <input id="input-yy" type="number" name="input-yy" placeholder="YY">
+                    </div>
+                </div>
+                <label for="cvc-input" class="cvc-card">CVC<input id="cvc-input" type="number" name="cvc-input"
+                        placeholder="e.g. 123"></label>
+            </div>
             <input value="Confirm" id="submint-data" type="submit">
         </form>
+        <div class="thank-you-container inactive">
+            <img src="./images/icon-complete.svg" alt="">
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details</p>
+            <button>Continue</button>
+        </div>
+        <script src="./main.js"></script>
     </main>
     <footer>
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
         <a href="https://github.com/StalinAM/InteractiveCardDetailsForm.git" target="_blank">StalinAM</a>.
     </footer>
+
 </body>
 
 </html>
