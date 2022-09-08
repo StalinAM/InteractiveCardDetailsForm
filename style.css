@@ -1,6 +1,6 @@
 :root {
   /* Primary */
-  --Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --Linear-gradient: hsl(249, 99%, 64%);
   --Red: hsl(0, 100%, 66%);
   /* Neutral */
   --White: hsl(0, 0%, 100%);
@@ -92,7 +92,6 @@ main {
 .form-container {
   display: flex;
   flex-direction: column;
-  max-width: 375px;
   padding: 20px;
 }
 .form-container label {
@@ -106,40 +105,91 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+.data-cvc-container div:nth-child(2) {
+  padding-left: 5px;
+}
 .data-container {
   display: flex;
   flex-direction: column;
 }
 .data-container div input {
-  width: 68px;
+  width: 84px;
 }
 .data-container div input:nth-child(1) {
-  margin-right: 16px;
+  margin-right: 4px;
 }
 .card-name {
   margin-top: 68px;
 }
 input {
   padding: 12px;
+  width: 360px;
   border: 1px solid var(--Light-grayish-violet);
   border-radius: 7px;
-  margin: 8px 0 23px;
+  margin: 8px 0 35px;
   font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.form-container,
+.data-cvc-container {
+  position: relative;
+}
+
+.name-span,
+.number-span,
+.mm-span,
+.yy-span,
+.cvc-span {
+  position: absolute;
+  color: var(--Red);
+  font-size: 0.7rem;
+}
+.name-span {
+  top: 168px;
+}
+.number-span {
+  top: 277px;
+}
+.mm-span {
+  left: 0px;
+  bottom: 14px;
+}
+.yy-span {
+  left: 92px;
+  bottom: 14px;
+}
+.cvc-span{
+  bottom: 14px;
+  right: 80px;
+}
+input:focus:invalid {
+  outline: 1px solid var(--Red);
+}
+input:valid {
+  outline: 1px solid var(--Linear-gradient);
 }
 .date-card input {
   width: 68px;
 }
-.cvc-card input {
-  width: 165px;
+#cvc-input {
+  width: 176px;
 }
 input::placeholder {
   font-size: 1.125rem;
   color: var(--Light-grayish-violet);
 }
-#submint-data {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#submit-data {
   font-size: 1.063rem;
   background-color: var(--Very-dark-violet);
   color: var(--White);
+  cursor: pointer;
+  outline: none;
 }
 .thank-you-container {
   display: flex;
@@ -168,9 +218,9 @@ input::placeholder {
   background-color: var(--Very-dark-violet);
   color: var(--Light-grayish-violet);
   border: none;
-  background-color: var(--Very-dark-violet);
   padding: 12px 121px;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .inactive {
@@ -218,9 +268,9 @@ footer a {
     top: 224px;
   }
   #name-card {
-    top: 400px;
+    top: 408px;
     left: 194px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   #number-card {
     top: 345px;
@@ -228,9 +278,9 @@ footer a {
     font-size: 1.7rem;
   }
   #date-card {
-    top: 400px;
+    top: 408px;
     left: 514px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   #cvc-card {
     top: 601px;
